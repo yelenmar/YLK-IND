@@ -1,0 +1,181 @@
+/*<general>*/
+header {
+	background-color: white;
+	width: 100%;
+	float: left;
+	text-align: center;
+}
+nav {
+	text-align: center;
+	background-color: #b8e986;
+	width: 100%;
+}
+nav a {
+	display: inline-block;
+	color: black;
+	text-decoration: none;
+	font-size: 130%;
+	padding: 0, 80%;
+	margin-left: 4%;
+}
+a {
+	color: black;
+	text-decoration: none;
+}
+a:hover {
+	color: rgb(25, 85, 8);
+}
+a:visited {
+	color: black;
+}
+
+body {
+	text-align: center; /* Alinea el contenido del cuerpo al centro */
+	margin-left: 0;
+	margin-right: 0;
+}
+
+footer {
+	width: 100%; /* Ancho del 100% de la pantalla */
+	bottom: 0; /* Posición fija en la parte inferior */
+	height: 8%; /* Altura del footer */
+	position: fixed; /* Posición fija */
+	background-color: #b8e986;
+}
+/*</general>*/
+
+/*<index>*/
+.video{
+	width: 25%;
+	margin: 0;
+	padding: 0;
+	display: inline-block;
+}
+/*</index>*/
+
+/*<listado box>*/
+.descrip {
+	margin: 1%;
+	/* float: left; */ /* Alinea la imagen a la izquierda */
+	/* width: 30%; */
+}
+/* Estilo para el texto */
+.product-description {
+	text-align: left; /* Alinea el texto de forma justificada */
+	font-size: 16px; /* Tamaño de fuente */
+}
+
+h1 {
+	text-align: center;
+	margin-top: 20px;
+}
+/*</listado box>*/
+
+/*<listadp tabla>*/
+table,th,td {
+	border: 1px solid #b8e986;
+	border-collapse: collapse;
+}
+th,td {
+	padding: 5px;
+}
+table {
+	border-spacing: 0%;
+}
+td {
+	width: 10%;
+}
+
+/*</listado tabla>*/
+
+/*<comprar>*/
+.container {
+	width: 80%;
+	max-width: 800px;
+	margin: 0 auto;
+	background-color: #b8e986;
+	border: 1px solid rgb(25, 85, 8);
+	padding: 20px;
+	
+}
+
+.form-group {
+	display: flex;
+	align-items: center;
+	margin-bottom: 10px;
+}
+
+.form-group label {
+	width: 30%;
+	font-weight: bold;
+}
+
+.form-group input,.form-group select {
+	width: 70%;
+	padding: 5px;
+	border: 1px solid #b8e986;
+}
+
+.form-group input[type="checkbox"] {
+	width: auto;
+	margin-right: 10px;
+}
+
+.error {
+	color: red;
+	font-size: 12px;
+}
+
+/* Estilos del botón */
+.button {
+	display: flex;
+	justify-content: center;
+	margin-top: 20px;
+}
+
+.button input {
+	padding: 10px 20px;
+	border: none;
+	background-color: rgb(14, 46, 5);
+	color: white;
+	font-size: 16px;
+	cursor: pointer;
+}
+
+.buy-button{
+	align-content: center;
+	background-color: #b8e986;
+	color: black;
+	border: 1px;
+}
+/*</comprar>*/
+/*<producto>*/
+
+.tablaprodtr{
+	display: flex;
+	align-items: stretch;
+	width: 100%;
+	border-collapse: collapse;
+}
+.prodimg{
+	/* width: 60%; */
+	align-items: center;
+	padding: 0;
+	border: 1px solid#B8E986;
+	text-align: center;
+}
+
+.proddesc{
+	width: 40%;
+	padding: 15px;
+	padding: 0; 
+	border: 1px solid#B8E986;
+	text-align: center;
+	
+}
+.product-description{
+	border: 0;
+	align-items: center;
+	align-content: center;
+}
+/*</producto>*/
