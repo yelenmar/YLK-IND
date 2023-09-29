@@ -1,56 +1,290 @@
 <!DOCTYPE html>
 <html lang="en">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Productos</title>
-    <link href="css/style.css" rel="stylesheet" type="text/css">
-</head>
-<body>
-    <header class="tabla" >
-        <img src="img/bolsaencabezado.png" alt="bolsa"  width="4%" style="float: left;">
-        <img src="img/logo.jpeg" alt="logo" class="logolistado"  width="20%" style="float: right;">
-        <h1 style="text-align: center;"> P R O D U C T</h1>
-    </header>
-    <main>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<title>Formulario de compras</title>
+        <link href="css/style.css" rel="stylesheet" type="text/css">
+
+        <script src="https://kit.fontawesome.com/81581fb069.js" crossorigin="anonymous"> </script>
+
+        <script>
+            /*
+            const inputQuantity = document.querySelector('.input-quantity');
+            const btnIncrement = document.querySelector('#increment');
+            const btnDecrement = document.querySelector('#decrement');
+
+            let valueByDefault = parseInt(inputQuantity.value);
+
+            // Funciones Click
+            btnIncrement.addEventListener('click', () => {
+                valueByDefault += 1;
+                inputQuantity.value = valueByDefault;
+            });
+
+            btnDecrement.addEventListener('click', () => {
+                if (valueByDefault === 1) {
+                    return;
+                }
+                valueByDefault -= 1;
+                inputQuantity.value = valueByDefault;
+            });
+s
+            const toggleDescription = document.querySelector(
+                '.title-description'
+            );
+            const toggleAdditionalInformation = document.querySelector(
+                '.title-additional-information'
+            );
+            const toggleReviews = document.querySelector('.title-reviews');
+
+            const contentDescription = document.querySelector(
+                '.text-description'
+            );
+            const contentAdditionalInformation = document.querySelector(
+                '.text-additional-information'
+            );
+            const contentReviews = document.querySelector('.text-reviews');
+
+            toggleDescription.addEventListener('click', () => {
+                contentDescription.classList.toggle('hidden');
+            });
+
+            toggleAdditionalInformation.addEventListener('click', () => {
+                contentAdditionalInformation.classList.toggle('hidden');
+            });
+
+            toggleReviews.addEventListener('click', () => {
+                contentReviews.classList.toggle('hidden');
+            });
+            
+            $(document).ready(function(){
+                $('#product-carousel').slick({
+                    slidesToShow: 3, 
+                    slidesToScroll: 1, 
+                    infinite: true, 
+                    arrows: true, 
+                    dots: true, 
+                    autoplay: true, // Reproducción automática
+                    autoplaySpeed: 3000 // Velocidad
+                });
+            });
+            /*
+        </script>
+
+        <style>
+
+            .titulo{
+                background-color:#b8e986;
+                padding: .2em;
+
+            }
+            .carousel {
+                display: flex;
+                overflow: hidden;
+                width: 100%;
+            }
+
+            .carousel__container {
+                display: flex;
+                transition: transform 0.5s ease-in-out;
+            }
+
+            .carousel__item {
+                flex: 0 0 100%;
+                margin: .5em;
+                align-items: center;
+            }
+
+            .product {
+                background-color:whitesmoke;
+                color:black;
+                border-radius: .8em;
+                padding: 1%;
+                text-align: center;
+    
+            }
+            .img{
+                width: 20%;
+            }
+        </style>
+	</head>
+
+	<body>
+		<header class="headerproducto" >
+            <img src="img/bolsaencabezado.png" alt="bolsa"  width="4%" style="float: left; padding: 1%;">
+            <img src="img/logo.jpeg" alt="logo" class="logolistado"  width="20%" style="float: right; padding: 0.5%">
+        </header>
+
         <nav>
             <hr>
-            <div>
+            <div class="navcomprar">
               <a href="index.html">Home</a>
+              <a href="listado_box.html">Box</a>
               <a href="listado_tabla.html">Table</a>
               <hr>
             </div>
         </nav>
-            <article>
-                <table class="tablaprod">
-                    <tr class="tablaprodtr">
-                        <th class="prodimg">
-                            <img src="img/prod6/l.jpg" class="descrip" alt="prod6l" width="30%"><img src="img/prod6/k.jpg" class="descrip" alt="prod6k" width="32%">
-                        </th>
-                        <th class="proddesc">
-                            <section class="product-description">
-                                <h2>" Endless Love Chapter II "</h2>
-                                <h1>Precio: $17.000</h1>
-                                <div class="product-description">
-                                    <p>Remera oversize de algodon.</p>
-                                </div>
-                                <h4>Talles disponibles</h4>
-                                <select name="talle">
-                                    <option value="S">S</option>
-                                    <option value="M">M</option>
-                                    <option value="L">L</option>
-                                    <option value="XL">XL</option>
-                                </select>
-                                <a href="comprar.html"</a><button class="buy-button">Buy</button>
-                            </section>
-                        </th>
-                    </tr>
-                </table>
-            </article>
-        </main>
-        <br>
-        <br>
-        <footer> 
-            <p>© 2023 Todos los derechos reservados. <a href="https://www.instagram.com/yelenkamaroseck"> Autor: Yelenka Maroseck.</a></p>
+
+		<main class="mainproducto">
+			<div class="container-img">
+				<img src="img/prod6/k.jpg" alt="imagen-producto" style="width: 60%;"/>
+			</div>
+			<div class="container-info-product">
+				<div class="container-price">
+                    <span>" Endless Love Chapter II "</span>
+					<span>$17.000</span>
+					<i class="fa-solid fa-angle-right"></i>
+				</div>
+
+				<div class="container-details-product">
+					<div class="form-group">
+						<label for="colour">COLOR</label>
+						<select name="colour" id="colour">
+							<option disabled selected value="">
+								Escoge una opción
+							</option>
+							<option value="negro">Negro</option>
+							<option value="blanco">Blanco</option>
+						</select>
+					</div>
+					<div class="form-group">
+						<label for="size">TALLE</label>
+						<select name="size" id="size">
+							<option disabled selected value="">
+								Escoge una opción
+							</option>
+                            <option value="XS">XS</option>
+							<option value="S">S</option>
+							<option value="M">M</option>
+							<option value="L">L</option>
+							<option value="XL">XL</option>
+                            <option value="XXL">XXL</option>
+						</select>
+					</div>
+				</div>
+
+				<div class="container-add-cart">
+					<div class="container-quantity">
+						<input
+							type="number"
+							placeholder="1"
+							value="1"
+							min="1"
+							class="input-quantity"
+						/>
+						<div class="btn-increment-decrement">
+							<i class="fa-solid fa-chevron-up" id="increment"></i>
+							<i class="fa-solid fa-chevron-down" id="decrement"></i>
+						</div>
+					</div>
+					<button class="btn-add-to-cart">
+						<i class="fa-solid fa-plus"></i>
+                        <a href="comprar.html">COMPRAR</a>
+					</button>
+				</div>
+
+				<div class="container-description">
+					<div class="title-description">
+						<h4>Descripción</h4>
+						<i class="fa-solid fa-chevron-down"></i>
+					</div>
+					<div class="text-description">
+						<p>
+							Lorem ipsum dolor, sit amet consectetur adipisicing
+							elit. Laboriosam iure provident atque voluptatibus
+							reiciendis quae rerum, maxime placeat enim cupiditate
+							voluptatum, temporibus quis iusto. 
+						</p>
+					</div>
+				</div>
+                <div class="container-description">
+					<div class="title-description">
+						<h4>Información adicional</h4>
+						<i class="fa-solid fa-chevron-down"></i>
+					</div>
+					<div class="text-description">
+						<p>
+							Lorem ipsum dolor, sit amet consectetur adipisicing
+							elit. Laboriosam iure provident atque voluptatibus
+							reiciendis quae rerum, maxime placeat enim cupiditate
+							voluptatum, temporibus quis iusto. 
+						</p>
+					</div>
+				</div>
+			</div>
+		</main>
+        <hr>
+
+
+        <div>
+            <h2 class="titulo">PRODUCTOS RELACIONADOS</h2>
+            <div class="carousel">
+                <div class="carousel__container">
+                    <div class="carousel__item">
+                        <div class="product">
+                            <h2> " G H O T H I C " </h2>
+                            <img src="img/prod8/o.jpg" alt="prod8" class="img"><img src="img/prod8/p.jpg" alt="prod8" class="img">
+                        </div>
+                    </div>
+                    <div class="carousel__item">
+                        <div class="product">
+                            <h2>" 53rd "</h2>
+                            <img src="img/prod5/i.jpg" alt="" class="img"><img src="img/prod5/j.jpg" alt="" class="img">
+                        </div>
+                    </div>
+                    <div class="carousel__item">
+                        <div class="product">
+                            <h2> " Ghetto Chrome " </h2>
+                            <img src="img/prod7/m.jpg" alt="" class="img"><img src="img/prod7/n.jpg" alt="" class="img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <script>
+                var carousel = document.querySelector(".carousel");
+                var container = document.querySelector(".carousel__container");
+                var items = document.querySelectorAll(".carousel__item");
+                var index = 0; 
+                var interval = 3000;
+
+                function prevItem() {
+                    index--;
+                    if (index < 0) {
+                        index = items.length - 1; 
+                    }
+                    var translateX = -index * carousel.offsetWidth;
+                    container.style.transform = "translateX(" + translateX + "px)";
+                }
+
+                function nextItem() {
+                    index++;
+                    if (index > items.length - 1) {
+                        index = 0; // Si se llega al último item, se vuelve al primero
+                    }
+                    // Se calcula el desplazamiento del contenedor
+                    var translateX = -index * carousel.offsetWidth;
+                    container.style.transform = "translateX(" + translateX + "px)";
+                }
+        
+                var timer = setInterval(nextItem, interval);
+        
+                carousel.addEventListener("click", function() {
+                    clearInterval(timer);
+                    nextItem();
+                    // Se reinicia el temporizador
+                    timer = setInterval(nextItem, interval);
+                });
+            </script>
+        </div>
+
+
+        <footer>
+            <div class="footerproducto">
+                <p>© 2023 Todos los derechos reservados. <a href="https://www.instagram.com/yelenkamaroseck">Autor: Yelenka Maroseck.</a></p>
+            </div> 
         </footer>
-</body>
+	</body>
 </html>
